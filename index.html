@@ -1,64 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://www.esmerasol.com/#website",
-      "url": "https://www.esmerasol.com/",
-      "name": "Esmera Global Solutions",
-      "inLanguage": "en",
-      "publisher": { "@id": "https://www.esmerasol.com/#org" }
-    },
-    {
-      "@type": "People & Performance Partners",
-      "@id": "https://www.esmerasol.com/#org",
-      "name": "Esmera Global Solutions",
-      "url": "https://www.esmerasol.com/",
-      "logo": "https://www.esmerasol.com/assets/images/logo.png",
-      "image": "https://www.esmerasol.com/assets/images/hero.jpg",
-      "sameAs": [
-        "https://www.linkedin.com/company/109095232",
-        "https://t.me/Esmera_Global_Solutions"
-      ],
-      "email": "enquiries@esmerasol.com",
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "contactType": "Customer support",
-        "email": "enquiries@esmerasol.com",
-        "areaServed": "International",
-        "availableLanguage": ["en","ru","kk"]
-      }],
-      "description": "International recruitment & consulting for the energy industry: engineering and technical roles, O&M support, project staffing, executive search, corporate training.",
-      "currenciesAccepted": "USD,KZT",
-      "paymentAccepted": "Invoice",
-      "areaServed": "International"
-    }
-  ]
-}
-</script> <head <link rel="alternate" hreflang="en" href="https://www.esmerasol.com/?lang=en" />
-<link rel="alternate" hreflang="ru" href="https://www.esmerasol.com/?lang=ru" />
-<link rel="alternate" hreflang="kk" href="https://www.esmerasol.com/?lang=kz" />
-<link rel="alternate" hreflang="x-default" href="https://www.esmerasol.com/" />
->
+<head>
+  <!-- Hreflang (one set only) -->
+  <link rel="alternate" hreflang="en" href="https://www.esmerasol.com/?lang=en" />
+  <link rel="alternate" hreflang="ru" href="https://www.esmerasol.com/?lang=ru" />
+  <link rel="alternate" hreflang="kk" href="https://www.esmerasol.com/?lang=kz" />
+  <link rel="alternate" hreflang="x-default" href="https://www.esmerasol.com/" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Esmera Global Solutions — Landing</title>
+  <title>Esmera Global Solutions — Recruitment & Consulting for the Energy Industry</title>
   <meta name="theme-color" content="#0b1320" />
 
   <!-- Primary SEO -->
-  <link rel="canonical" href="https://www.esmerasol.com/" /> <link rel="alternate" hreflang="en" href="https://www.esmerasol.com/?lang=en" />
-<link rel="alternate" hreflang="ru" href="https://www.esmerasol.com/?lang=ru" />
-<link rel="alternate" hreflang="kk" href="https://www.esmerasol.com/?lang=kz" />
-<link rel="alternate" hreflang="x-default" href="https://www.esmerasol.com/" />
-  <meta name="description" content="Esmera Global Solutions — recruitment & consulting for the energy industry. International hiring, O&M support, training, and HR outsourcing across oil &amp; gas and industry." />
+  <link rel="canonical" href="https://www.esmerasol.com/" />
+  <meta name="description" content="Esmera Global Solutions — recruitment & consulting for the energy industry: oil & gas, industrial projects and renewables. International hiring, O&M support, project staffing, executive search, and corporate training." />
   <meta name="robots" content="index,follow" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Esmera Global Solutions — Recruitment & Consulting" />
-  <meta property="og:description" content="Esmera Global Solutions — recruitment & consulting for the energy industry. International hiring, O&M support, training, and HR outsourcing across oil &amp; gas and industry." />
+  <meta property="og:title" content="Esmera Global Solutions — Recruitment & Consulting for the Energy Industry" />
+  <meta property="og:description" content="Recruitment & consulting across energy: oil & gas, industrial, renewables. International hiring, O&M support, project staffing, executive search, and training." />
   <meta property="og:url" content="https://www.esmerasol.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://www.esmerasol.com/assets/images/hero.jpg" />
@@ -66,17 +27,49 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- JSON-LD Organization -->
+  <!-- Unified JSON-LD: Organization + EmploymentAgency + ProfessionalService -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Esmera Global Solutions",
-    "url": "https://www.esmerasol.com/",
-    "logo": "https://www.esmerasol.com/assets/images/logo.png",
-    "sameAs": [
-      "https://www.linkedin.com/company/109095232",
-      "https://t.me/Esmera_Global_Solutions"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.esmerasol.com/#website",
+        "url": "https://www.esmerasol.com/",
+        "name": "Esmera Global Solutions",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://www.esmerasol.com/#org" }
+      },
+      {
+        "@type": ["Organization","EmploymentAgency","ProfessionalService"],
+        "@id": "https://www.esmerasol.com/#org",
+        "name": "Esmera Global Solutions",
+        "alternateName": ["People & Performance Partners"],
+        "slogan": "People & Performance Partners",
+        "url": "https://www.esmerasol.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.esmerasol.com/assets/images/logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.esmerasol.com/assets/images/hero.jpg"
+        },
+        "description": "International recruitment & consulting for the energy industry: oil & gas, industrial and renewables. Services include executive search, project & temporary staffing, O&M support, and corporate training.",
+        "sameAs": [
+          "https://www.linkedin.com/company/109095232",
+          "https://t.me/Esmera_Global_Solutions"
+        ],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "contactType": "Customer support",
+          "email": "enquiries@esmerasol.com",
+          "availableLanguage": ["en","ru","kk"],
+          "areaServed": "International"
+        }]
+      }
     ]
   }
   </script>
@@ -191,28 +184,30 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Esmera Global Solutions — Intro",
-  "description": "Hero background video showing energy industry visuals for the energy & industrial recruitment agency.",
-  "thumbnailUrl": "https://www.esmerasol.com/assets/images/hero.jpg",
-  "uploadDate": "2025-10-19",
-  "contentUrl": "https://www.esmerasol.com/assets/videos/hero.mp4",
-  "embedUrl": "https://www.esmerasol.com/",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Esmera Global Solutions",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.esmerasol.com/assets/images/logo.png"
+
+  <!-- JSON-LD: VideoObject (keep) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Esmera Global Solutions — Intro",
+    "description": "Hero background video showing energy industry visuals for the energy & industrial recruitment agency.",
+    "thumbnailUrl": "https://www.esmerasol.com/assets/images/hero.jpg",
+    "uploadDate": "2025-10-19",
+    "contentUrl": "https://www.esmerasol.com/assets/videos/hero.mp4",
+    "embedUrl": "https://www.esmerasol.com/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Esmera Global Solutions",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.esmerasol.com/assets/images/logo.png"
+      }
     }
   }
-}
-</script>
+  </script>
 </head>
-
+  
 <body class="antialiased text-slate-800 bg-metallic">
   <!-- Header / Nav -->
   <header class="sticky top-0 z-40 bg-black/70 text-white backdrop-blur border-b border-white/10">
