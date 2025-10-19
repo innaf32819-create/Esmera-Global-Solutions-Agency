@@ -27,53 +27,66 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Unified JSON-LD: Organization + RecruitmentAgency + ProfessionalService -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.esmerasol.com/#website",
-        "url": "https://www.esmerasol.com/",
-        "name": "Esmera Global Solutions",
-        "inLanguage": "en",
-        "publisher": { "@id": "https://www.esmerasol.com/#org" }
-      },
-      {
-        "@type": ["Organization","Recruitment Agency","ProfessionalService"],
-        "@id": "https://www.esmerasol.com/#org",
-        "name": "Esmera Global Solutions",
-        "alternateName": ["People & Performance Partners"],
-        "slogan": "People & Performance Partners",
-        "url": "https://www.esmerasol.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.esmerasol.com/assets/images/logo.png",
-          "width": 512,
-          "height": 512
-        },
-        "image": {
-          "@type": "ImageObject",
-          "url": "https://www.esmerasol.com/assets/images/hero.jpg"
-        },
-        "description": "International recruitment & consulting for the energy industry: oil & gas, industrial and renewables. Services include executive search, project & temporary staffing, O&M support, and corporate training.",
-        "sameAs": [
-          "https://www.linkedin.com/company/109095232",
-          "https://t.me/Esmera_Global_Solutions"
-        ],
-        "contactPoint": [{
-          "@type": "ContactPoint",
-          "contactType": "Customer support",
-          "email": "enquiries@esmerasol.com",
-          "availableLanguage": ["en","ru","kk"],
-          "areaServed": "International"
-        }]
-      }
-    ]
-  }
-  </script>
+  <!-- Unified JSON-LD: Organization + EmploymentAgency + ProfessionalService -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.esmerasol.com/#website",
+      "url": "https://www.esmerasol.com/",
+      "name": "Esmera Global Solutions",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://www.esmerasol.com/#org" }
+    },
+    {
+      "@type": ["Organization","EmploymentAgency","ProfessionalService"],
+      "@id": "https://www.esmerasol.com/#org",
 
+      "name": "Esmera Global Solutions",
+      "alternateName": ["People & Performance Partners"],
+      "slogan": "People & Performance Partners",
+
+      /* РОВНО ОДИН url В ЭТОМ ОБЪЕКТЕ */
+      "url": "https://www.esmerasol.com/",
+
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.esmerasol.com/assets/images/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.esmerasol.com/assets/images/hero.jpg"
+      },
+
+      "description": "International recruitment & consulting for the energy industry: oil & gas, industrial and renewables. Services include executive search, project & temporary staffing, O&M support, and corporate training.",
+
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Aksay",
+        "addressRegion": "West Kazakhstan",
+        "addressCountry": "KZ"
+      },
+
+      "sameAs": [
+        "https://www.linkedin.com/company/109095232",
+        "https://t.me/Esmera_Global_Solutions"
+      ],
+
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "Customer support",
+        "email": "enquiries@esmerasol.com",
+        "availableLanguage": ["en","ru","kk"],
+        "areaServed": "International"
+      }]
+    }
+  ]
+}
+</script>
   <!-- Tailwind CSS via CDN (no build needed) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
