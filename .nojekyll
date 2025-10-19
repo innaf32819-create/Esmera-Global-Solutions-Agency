@@ -1,5 +1,1 @@
-git pull
-> .nojekyll   # создать пустой файл (в bash/zsh можно так)
-git add .nojekyll
-git commit -m "Add .nojekyll"
-git push
+
