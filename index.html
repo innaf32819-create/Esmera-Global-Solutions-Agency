@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <!-- Hreflang (one set only) -->
   <link rel="alternate" hreflang="en" href="https://www.esmerasol.com/?lang=en" />
@@ -8,7 +10,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- NEW: concise, keyworded title -->
+  <!-- NEW concise title -->
   <title>Esmera Global Solutions — Energy Recruitment & Training</title>
   <meta name="theme-color" content="#0b1320" />
 
@@ -45,7 +47,7 @@
         "@type": ["Organization","EmploymentAgency","ProfessionalService"],
         "@id": "https://www.esmerasol.com/#org",
         "name": "Esmera Global Solutions",
-        "alternateName": ["Energy Recruitment & Training","People & Performance Partners"],
+        "alternateName": ["Energy Recruitment & Training", "People & Performance Partners"],
         "slogan": "Energy Recruitment & Training",
         "url": "https://www.esmerasol.com/",
         "logo": {
@@ -81,15 +83,118 @@
   }
   </script>
 
-  <!-- Tailwind CSS via CDN -->
+  <!-- Tailwind CSS via CDN (no build needed) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Base visuals */
+    .bg-emerald-gradient { background: linear-gradient(180deg,#0f172a 0%,#022c22 60%,#065f46 100%); }
+    .frosted { backdrop-filter: blur(8px); background: rgba(255,255,255,0.85); }
+    .container-narrow { max-width: 1080px; }
+    .nav-link { padding: 0.35rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight:600; }
+    .nav-link:hover { background: rgba(255,255,255,0.10); }
+
+    /* Hero media */
+    #home { position: relative; }
+    #home .hero-media { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center center; z-index:-2; background:#0b1320; }
+    #home .hero-scrim { position:absolute; inset:0; background:transparent; z-index:-1; pointer-events:none; }
+    #home.has-hero-overlay .hero-scrim { background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.28)); }
+    #home h1, #home p { text-shadow: none; }
+
+    /* Buttons */
+    .btn { display:inline-flex; align-items:center; justify-content:center; font-weight:700; padding:0.75rem 1.25rem; border-radius:0; box-shadow:0 2px 6px rgba(0,0,0,.15); }
+    .btn-primary { background:#000; color:#fff; }
+    .btn-primary:hover { background:#111; }
+    .btn-secondary { background:#000; color:#fff; }
+    .btn-secondary:hover { background:#111; }
+
+    /* Lang buttons */
+    .btn-flag{ border-radius:0; font-weight:700; background:#065f46; color:#dfe6ef; border:1px solid #10b981; padding:0.35rem 0.6rem; font-size:0.75rem; line-height:1; }
+    .btn-flag:hover{ background:#047857; }
+    .btn-flag:focus-visible{ outline:2px solid #34d399; outline-offset:2px; }
+    .lang-en,.lang-ru,.lang-kz{ background:#065f46; color:#dfe6ef; border-color:#10b981; }
+
+    /* Plates */
+    .plate{ position:relative; border-radius:14px; background:linear-gradient(135deg,#006b5b 0%, #00483f 55%, #001311 85%, #000 100%) !important; color:#fff !important; border:0 !important; box-shadow: 0 14px 28px rgba(0,0,0,.45), 0 2px 10px rgba(0,0,0,.35), 0 0 34px rgba(0,107,91,.25); }
+    .plate::before{ content:""; position:absolute; inset:0; pointer-events:none; border-radius:14px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), inset 0 0 22px rgba(16,185,129,.08); }
+    .plate h2, .plate h3{ color:#fff !important; font-weight:800; letter-spacing:-.01em; }
+    .plate p, .plate li, .plate span, .plate a:not(.btn-social){ color:#fff !important; opacity:.96; text-shadow:none; background:none; -webkit-text-fill-color:initial; }
+    .plate a{ text-decoration: underline; text-underline-offset:4px; }
+    .plate .lucide{ color:#10b981 !important; stroke:#10b981 !important; stroke-width:1.6; opacity:.95; }
+
+    /* About (same bg as others) */
+    #about { position: relative; }
+    #about::before { content: none; }
+    #about .plate{ position:relative; border-radius:14px; background: rgba(255,255,255,0.55) !important; color:#0f172a !important; border:0 !important; backdrop-filter: blur(10px); box-shadow: 0 10px 28px rgba(0,0,0,.25); }
+    #about .plate h1,#about .plate h2,#about .plate h3,#about .plate p,#about .plate li,#about .plate span,#about .plate a{ color:#0f172a !important; -webkit-text-fill-color: initial; background:none; text-shadow:none; }
+    #about .plate a{ text-decoration: underline; text-underline-offset:4px; color:#065f46 !important; }
+    @media (max-width: 768px){ #about .plate{ background: rgba(255,255,255,0.68) !important; } }
+
+    /* Anchor offset */
+    section[id]{ scroll-margin-top: 140px; }
+
+    /* Metallic heading */
+    .metallic{ background: linear-gradient(180deg,#fbfcfd 0%, #eef2f5 30%, #d6dce2 55%, #f7f9fb 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; text-shadow: 0 1px 0 rgba(255,255,255,.5), 0 2px 10px rgba(255,255,255,.18), 0 2px 8px rgba(0,0,0,.22); letter-spacing: .2px; }
+
+    /* Lists */
+    #strategy-items{ list-style:none; padding-left:0; margin-left:0; }
+    #strategy-items li{ list-style:none; }
+    .no-bullets{ list-style:none; padding-left:0; margin-left:0; }
+    .no-bullets li{ list-style:none; }
+
+    /* Contact emails */
+    .contact-email, .contact-email span { text-decoration: none !important; font-weight: 700 !important; }
+
+    /* Page background — darker metallic gradient */
+    .bg-metallic{
+      background:
+        radial-gradient(1200px 800px at 20% 10%, rgba(0,0,0,0.06), transparent 60%),
+        radial-gradient(900px 600px at 80% 90%, rgba(0,0,0,0.04), transparent 55%),
+        linear-gradient(135deg,#e3e8ee 0%, #d7e0e8 28%, #c4cdd8 60%, #dfe5eb 100%);
+    }
+    section h2, section h3{color:#000;}
+
+    /* Social buttons */
+    .btn-social{position:relative;display:inline-flex;align-items:center;gap:.6rem;padding:.6rem 1rem;border-radius:9999px;font-weight:700;text-decoration:none !important;line-height:1;background:transparent;color:#fff;border:0;box-shadow:0 8px 20px rgba(0,0,0,.20);transition:transform .18s ease, box-shadow .18s ease, filter .18s ease;overflow:hidden;backdrop-filter:saturate(120%) blur(4px);cursor:pointer;}
+    .btn-social:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0));opacity:.35;pointer-events:none}
+    .btn-li{background:linear-gradient(135deg,#0a66c2 0%, #084f97 100%)}
+    .btn-tg{background:linear-gradient(135deg,#229ED9 0%, #177aa8 100%)}
+
+    /* Emerald bullets */
+    .emerald-list{ list-style:none; padding-left:1.25rem; margin:0; }
+    .emerald-list li{ position:relative; margin:.35rem 0; }
+    .emerald-list li::before{ content:""; position:absolute; left:-1.25rem; top:.55em; width:9px; height:9px; background: radial-gradient(circle at 35% 35%, #34d399, #059669 70%); transform: rotate(45deg); border-radius:2px; box-shadow: 0 0 6px rgba(16,185,129,.45); }
+
+    /* Brand font */
+    :root{ --brand-font: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji'; }
+    body{ font-family: var(--brand-font); letter-spacing:.2px; }
+    h1,h2,h3{ font-weight:800; letter-spacing:-.01em; }
+    .btn, .btn-flag{ font-family: var(--brand-font); }
+    header span[class*="font-extrabold"]{ letter-spacing:-.01em; }
+
+    /* Hero fallback image + overlay */
+    #home.parallax .hero-image{ background-attachment: fixed; }
+    #home .hero-image{ position:absolute; inset:0; z-index:-3; background-image:url('./assets/images/hero-industrial.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat; opacity:1; transition:opacity .6s ease; }
+    #home .hero-cinematic{ position:absolute; inset:0; z-index:-1; pointer-events:none; background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(2,44,34,0.55) 40%, rgba(0,0,0,0.65) 100%), radial-gradient(1200px 600px at 20% 30%, rgba(16,185,129,0.15), transparent 60%), radial-gradient(900px 500px at 80% 70%, rgba(16,185,129,0.10), transparent 60%); }
+    @media (max-width: 767px){ #home.parallax .hero-image{ background-attachment: scroll; } }
+
+    .brand-name{ word-spacing:0.5em; }
+    /* Mobile nav panel (off-canvas sheet) */
+    #mobile-nav{ display:none; }
+    #mobile-nav.open{ display:block; }
+    #mobile-nav{ position: fixed; inset: 0; z-index: 50; }
+    #mobile-nav .panel{ position:absolute; right:0; top:0; height:100%; width:85vw; max-width:360px; background:#0a0a0a; color:#fff; box-shadow: -12px 0 28px rgba(0,0,0,.45); transform: translateX(100%); transition: transform .25s ease; }
+    #mobile-nav.open .panel{ transform: translateX(0); }
+    #mobile-nav .overlay{ position:absolute; inset:0; background: rgba(0,0,0,.6); }
+    @media (min-width: 768px){ #mobile-nav{ display:none !important; } }
+  </style>
 
   <!-- Brand font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- JSON-LD: VideoObject (unchanged) -->
+  <!-- JSON-LD: VideoObject -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -103,15 +208,15 @@
     "publisher": {
       "@type": "Organization",
       "name": "Esmera Global Solutions",
-      "logo": { "@type": "ImageObject", "url": "https://www.esmerasol.com/assets/images/logo.png" }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.esmerasol.com/assets/images/logo.png"
+      }
     }
   }
   </script>
-
-  <!-- your existing styles go here (unchanged) -->
-  <style>/* …оставь как есть… */</style>
 </head>
-
+  
 <body class="antialiased text-slate-800 bg-metallic">
   <!-- Header / Nav -->
   <header class="sticky top-0 z-40 bg-black/70 text-white backdrop-blur border-b border-white/10">
@@ -269,7 +374,7 @@
     "en": {
       "nav": ["Home","Strategy","Services","Why Us","About","Contacts"],
       "heroSub": "POWERED BY INDUSTRY EXPERTS: GLOBAL RECRUITMENT & CONSULTING FOR THE ENERGY INDUSTRY",
-      "heroSub2": "Our approach drives excellence across every stage of the recruitment process, merging deep industry expertise with best‑practice methodologies and innovation to deliver results that consistently exceed expectations.",
+      "heroSub2": "We deliver specialist hiring for energy projects and corporate upskilling programs: from executive search and project staffing to O&M support and certification-ready training.",
       "cta1": "Get your quote today",
       "cta2": "Explore services",
       "strategyTitle": "Our Strategy",
@@ -757,6 +862,6 @@
       console.warn('Smoke tests warning', e);
     }
   })();
-</script>
+  </script>
 </body>
-</html>  выходит как лендинг, можешь в код изменения внести как Energy Recruitment and Training 
+</html>
