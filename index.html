@@ -4,7 +4,7 @@
   <!-- Hreflang (one set only) -->
   <link rel="alternate" hreflang="en" href="https://www.esmerasol.com/?lang=en" />
   <link rel="alternate" hreflang="ru" href="https://www.esmerasol.com/?lang=ru" />
-  <link rel="alternate" hreflang="kk" href="https://www.esmerasol.com/?lang=kk" />
+  <link rel="alternate" hreflang="kz" href="https://www.esmerasol.com/?lang=kz" />
   <link rel="alternate" hreflang="x-default" href="https://www.esmerasol.com/" />
 
   <meta charset="UTF-8" />
@@ -75,7 +75,7 @@
           "@type": "ContactPoint",
           "contactType": "Customer support",
           "email": "enquiries@esmerasol.com",
-          "availableLanguage": ["en","ru","kk"],
+          "availableLanguage": ["en","ru","kz"],
           "areaServed": "International"
         }]
       }
@@ -112,7 +112,7 @@
     .btn-flag{ border-radius:0; font-weight:700; background:#065f46; color:#dfe6ef; border:1px solid #10b981; padding:0.35rem 0.6rem; font-size:0.75rem; line-height:1; }
     .btn-flag:hover{ background:#047857; }
     .btn-flag:focus-visible{ outline:2px solid #34d399; outline-offset:2px; }
-    .lang-en,.lang-ru,.lang-kk{ background:#065f46; color:#dfe6ef; border-color:#10b981; }
+    .lang-en,.lang-ru,.lang-kz{ background:#065f46; color:#dfe6ef; border-color:#10b981; }
 
     /* Plates */
     .plate{ position:relative; border-radius:14px; background:linear-gradient(135deg,#006b5b 0%, #00483f 55%, #001311 85%, #000 100%) !important; color:#fff !important; border:0 !important; box-shadow: 0 14px 28px rgba(0,0,0,.45), 0 2px 10px rgba(0,0,0,.35), 0 0 34px rgba(0,107,91,.25); }
@@ -237,7 +237,7 @@
       <div class="ml-auto flex items-center gap-2">
         <!-- Language Switcher -->
         <button class="btn btn-secondary btn-flag text-xs lang-en" data-lang-btn="en" aria-label="English">EN</button>
-        <button class="btn btn-secondary btn-flag text-xs lang-kk" data-lang-btn="kk" aria-label="Қазақша">KK</button>
+        <button class="btn btn-secondary btn-flag text-xs lang-kz" data-lang-btn="kz" aria-label="Қазақша">kz</button>
         <button class="btn btn-secondary btn-flag text-xs lang-ru" data-lang-btn="ru" aria-label="Русский">RU</button>
         <!-- Mobile menu toggle -->
         <button id="mobile-menu-btn" class="md:hidden p-2 rounded border border-white/10 hover:bg-white/10" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
@@ -851,7 +851,7 @@
   (function runSmokeTests(){
     try {
       console.assert(window.__i18nParsedOK === true, 'i18n should parse');
-      ['en','ru','kk'].forEach(lang => {
+      ['en','ru','kz'].forEach(lang => {
         const D = (typeof data === 'object') ? data[lang] : null;
         console.assert(!!D, `Missing dict for ${lang}`);
         console.assert(Array.isArray(D.nav) && D.nav.length === 6, `nav[${lang}] should have 6 items`);
