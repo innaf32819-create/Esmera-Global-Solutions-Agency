@@ -4,7 +4,7 @@
   <!-- Hreflang (one set only) -->
   <link rel="alternate" hreflang="en" href="https://www.esmerasol.com/?lang=en" />
   <link rel="alternate" hreflang="ru" href="https://www.esmerasol.com/?lang=ru" />
-  <link rel="alternate" hreflang="kk" href="https://www.esmerasol.com/?lang=kz" />
+  <link rel="alternate" hreflang="kk" href="https://www.esmerasol.com/?lang=kk" />
   <link rel="alternate" hreflang="x-default" href="https://www.esmerasol.com/" />
 
   <meta charset="UTF-8" />
@@ -112,7 +112,7 @@
     .btn-flag{ border-radius:0; font-weight:700; background:#065f46; color:#dfe6ef; border:1px solid #10b981; padding:0.35rem 0.6rem; font-size:0.75rem; line-height:1; }
     .btn-flag:hover{ background:#047857; }
     .btn-flag:focus-visible{ outline:2px solid #34d399; outline-offset:2px; }
-    .lang-en,.lang-ru,.lang-kz{ background:#065f46; color:#dfe6ef; border-color:#10b981; }
+    .lang-en,.lang-ru,.lang-kk{ background:#065f46; color:#dfe6ef; border-color:#10b981; }
 
     /* Plates */
     .plate{ position:relative; border-radius:14px; background:linear-gradient(135deg,#006b5b 0%, #00483f 55%, #001311 85%, #000 100%) !important; color:#fff !important; border:0 !important; box-shadow: 0 14px 28px rgba(0,0,0,.45), 0 2px 10px rgba(0,0,0,.35), 0 0 34px rgba(0,107,91,.25); }
@@ -122,7 +122,7 @@
     .plate a{ text-decoration: underline; text-underline-offset:4px; }
     .plate .lucide{ color:#10b981 !important; stroke:#10b981 !important; stroke-width:1.6; opacity:.95; }
 
-    /* About (same bg as others) */
+    /* About */
     #about { position: relative; }
     #about::before { content: none; }
     #about .plate{ position:relative; border-radius:14px; background: rgba(255,255,255,0.55) !important; color:#0f172a !important; border:0 !important; backdrop-filter: blur(10px); box-shadow: 0 10px 28px rgba(0,0,0,.25); }
@@ -179,7 +179,8 @@
     @media (max-width: 767px){ #home.parallax .hero-image{ background-attachment: scroll; } }
 
     .brand-name{ word-spacing:0.5em; }
-    /* Mobile nav panel (off-canvas sheet) */
+
+    /* Mobile nav panel */
     #mobile-nav{ display:none; }
     #mobile-nav.open{ display:block; }
     #mobile-nav{ position: fixed; inset: 0; z-index: 50; }
@@ -228,6 +229,7 @@
         <a href="#home" class="nav-link">Home</a>
         <a href="#strategy" class="nav-link">Strategy</a>
         <a href="#services" class="nav-link">Services</a>
+        <a href="#standards" class="nav-link">Standards</a>
         <a href="#why" class="nav-link">Why Us</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#contact" class="nav-link">Contacts</a>
@@ -236,7 +238,7 @@
       <div class="ml-auto flex items-center gap-2">
         <!-- Language Switcher -->
         <button class="btn btn-secondary btn-flag text-xs lang-en" data-lang-btn="en" aria-label="English">EN</button>
-        <button class="btn btn-secondary btn-flag text-xs lang-kz" data-lang-btn="kz" aria-label="Қазақша">KZ</button>
+        <button class="btn btn-secondary btn-flag text-xs lang-kk" data-lang-btn="kk" aria-label="Қазақша">KK</button>
         <button class="btn btn-secondary btn-flag text-xs lang-ru" data-lang-btn="ru" aria-label="Русский">RU</button>
         <!-- Mobile menu toggle -->
         <button id="mobile-menu-btn" class="md:hidden p-2 rounded border border-white/10 hover:bg-white/10" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
@@ -260,6 +262,7 @@
         <a href="#home" class="block py-3 text-base nav-link">Home</a>
         <a href="#strategy" class="block py-3 text-base nav-link">Strategy</a>
         <a href="#services" class="block py-3 text-base nav-link">Services</a>
+        <a href="#standards" class="block py-3 text-base nav-link">Standards</a>
         <a href="#why" class="block py-3 text-base nav-link">Why Us</a>
         <a href="#about" class="block py-3 text-base nav-link">About</a>
         <a href="#contact" class="block py-3 text-base nav-link">Contacts</a>
@@ -310,6 +313,14 @@
     <div class="mx-auto container-narrow px-4 py-16">
       <h2 class="text-2xl md:text-3xl font-bold" data-i18n="services-title"></h2>
       <div id="services-blocks" class="mt-8 grid gap-6 md:grid-cols-2"></div>
+    </div>
+  </section>
+
+  <!-- Standards (ISO/ILO/HSE + IA) -->
+  <section id="standards">
+    <div class="mx-auto container-narrow px-4 py-16">
+      <h2 class="text-2xl md:text-3xl font-bold" data-i18n="standards-title"></h2>
+      <div class="mt-6 plate p-6" id="standards-plate"></div>
     </div>
   </section>
 
@@ -372,7 +383,7 @@
   <script id="i18n-data" type="application/json">
   {
     "en": {
-      "nav": ["Home","Strategy","Services","Why Us","About","Contacts"],
+      "nav": ["Home","Strategy","Services","Standards","Why Us","About","Contacts"],
       "heroSub": "POWERED BY INDUSTRY EXPERTS: GLOBAL RECRUITMENT & CONSULTING FOR THE ENERGY INDUSTRY",
       "heroSub2": "We deliver specialist hiring for energy projects and corporate upskilling programs: from executive search and project staffing to O&M support and certification-ready training.",
       "cta1": "Get your quote today",
@@ -414,14 +425,16 @@
           "Selection and organization of leading international programs for professional upskilling"
         ]}
       ],
+      "standardsTitle": "International Standards & Data Protection",
+      "standardsHTML": "<p><strong>International Standards and Accreditations</strong></p><p>At Esmera Global Solutions, we align our management systems with the principles of <strong>ISO 9001 (Quality Management)</strong>, <strong>ISO 14001 (Environmental Management)</strong>, and <strong>ISO 45001 (Occupational Health & Safety)</strong>.</p><p>We also uphold the <strong>core conventions of the International Labour Organization (ILO)</strong> and implement <strong>comprehensive HSE standards</strong> across all our operations — ensuring a proactive culture of safety, environmental responsibility, and wellbeing.</p><p>In addition, we maintain a strong focus on <strong>Information Assurance</strong>, protecting our clients’ data with the highest standards of <strong>security, confidentiality, and integrity</strong> in line with international data protection regulations.</p>",
       "whyTitle": "Why Choose Esmera Global Solutions?",
       "whyCards": [
         "International Expertise + Personal Approach — We combine global know-how with a tailor-made strategy for every client and candidate.",
         "Integrated Solutions — From recruitment and payroll outsourcing to training and certification, we cover the full talent lifecycle.",
-        "Global Standards & Accreditation — Our services comply with ISO, ILO, and HSE requirements - ensuring quality, safety, and compliance.",
+        "Standards & Data Protection — Alignment with ISO 9001/14001/45001; adherence to ILO conventions and comprehensive HSE practices; strong Information Assurance.",
         "Advanced Testing & Development — Using tools like SHL, Hogan, and Talent Q, we deliver accurate assessment and support continuous learning.",
-        "ESG & Sustainability Commitment — We operate by the Three Pillars of Sustainability: People - fairness, inclusion, growth; Planet - responsibility, reduced footprint; Profit - long-term value and prosperity.",
-        "Strategic Partnership — We don't just supply staff - we become your trusted partner for building sustainable, high-performing teams."
+        "ESG & Sustainability Commitment — We operate by the Three Pillars of Sustainability: People (fairness, inclusion, growth); Planet (responsibility, reduced footprint); Profit (long-term value).",
+        "Strategic Partnership — We become your trusted partner for building sustainable, high-performing teams."
       ],
       "aboutTitle": "About Us",
       "aboutText": "Esmera Global Solutions is a consulting and recruitment company applying international best-practice standards from the energy industry. We provide recruitment, project support, and consulting services across oil and gas, industrial construction, and renewable energy sectors.<br><br>Founded in Aksay, Western Kazakhstan — a hub for oil and gas expertise near the Karachaganak field — Esmera Global Solutions has evolved within one of the region’s most advanced industrial environments. This foundation has given us first-hand understanding of large-scale project operations and workforce challenges.<br><br>The consultants and leadership team of Esmera Global Solutions collectively bring over 30 years of combined experience in international oil and gas projects, gained through collaboration with leading operators and EPC contractors across the CIS and beyond.<br><br>We translate this experience into measurable value for our clients by:",
@@ -436,7 +449,7 @@
       "links": { "linkedin": "https://www.linkedin.com/company/109095232", "telegram": "https://t.me/Esmera_Global_Solutions" }
     },
     "ru": {
-      "nav": ["Главная","Стратегия","Услуги","Почему мы","О нас","Контакты"],
+      "nav": ["Главная","Стратегия","Услуги","Стандарты","Почему мы","О нас","Контакты"],
       "heroSub": "СОЗДАНО ОТРАСЛЕВЫМИ ЭКСПЕРТАМИ: ГЛОБАЛЬНЫЙ РЕКРУТМЕНТ И КОНСАЛТИНГ ДЛЯ ЭНЕРГЕТИЧЕСКОЙ ИНДУСТРИИ.",
       "heroSub2": "Наш подход обеспечивает совершенство на каждом этапе рекрутингового процесса, объединяя глубокую отраслевую экспертизу, лучшие методологии и инновации для результатов, которые стабильно превосходят ожидания.",
       "cta1": "Получить расчёт стоимости",
@@ -478,14 +491,16 @@
           "Подбор и организация международных программ повышения квалификации"
         ]}
       ],
+      "standardsTitle": "Международные стандарты и защита данных",
+      "standardsHTML": "<p><strong>Международные стандарты и аккредитации</strong></p><p>В компании <em>Esmera Global Solutions</em> мы выстраиваем системы управления в соответствии с принципами <strong>ISO 9001 (Менеджмент качества)</strong>, <strong>ISO 14001 (Экологический менеджмент)</strong> и <strong>ISO 45001 (Охрана труда и безопасность)</strong>.</p><p>Мы также придерживаемся <strong>основных конвенций МОТ (ILO)</strong> и внедряем <strong>комплексные стандарты HSE</strong> во всех наших операциях — формируя проактивную культуру безопасности, экологической ответственности и благополучия сотрудников.</p><p>Кроме того, мы уделяем особое внимание <strong>информационной безопасности</strong>, защищая данные клиентов в соответствии с международными требованиями к <strong>конфиденциальности, целостности и защите информации</strong>.</p>",
       "whyTitle": "Почему выбирают Esmera Global Solutions?",
       "whyCards": [
         "Международная экспертиза + личный подход — Сочетаем глобальные практики с индивидуальной стратегией для каждого клиента и кандидата.",
         "Интегрированные решения — От подбора и аутсорсинга расчёта заработной платы до обучения и сертификации — весь жизненный цикл талантов.",
-        "Международные стандарты и аккредитации — Соответствие требованиям ISO, ILO и HSE — качество, безопасность и комплаенс.",
+        "Стандарты и защита данных — Выравнивание по ISO 9001/14001/45001; приверженность конвенциям МОТ и практикам HSE; сильная информационная безопасность.",
         "Продвинутая оценка и развитие — Инструменты SHL, Hogan, Talent Q — точная оценка и поддержка непрерывного обучения.",
-        "ESG и устойчивое развитие — Три столпа устойчивости: Люди — справедливость, инклюзия, рост; Планета — ответственность, снижение следа; Прибыль — долгосрочная ценность.",
-        "Стратегическое партнёрство — Мы не просто закрываем позиции — становимся доверенным партнёром по построению эффективных команд."
+        "ESG и устойчивое развитие — Три столпа: Люди (справедливость, инклюзия, рост); Планета (ответственность, снижение следа); Прибыль (долгосрочная ценность).",
+        "Стратегическое партнёрство — Мы становимся вашим надёжным партнёром в построении эффективных, устойчивых команд."
       ],
       "aboutTitle": "О нас",
       "aboutText": "Esmera Global Solutions — консалтинговая и рекрутинговая компания, применяющая международные стандарты лучшей практики, сформированные в энергетической отрасли. Мы предоставляем услуги по подбору персонала, проектной поддержке и консалтингу в сферах нефти и газа, промышленного строительства и возобновляемой энергетики.<br><br>Основана в Аксае (Западный Казахстан) — центре отраслевой экспертизы рядом с крупными международными проектами региона. Эта среда сформировала наш практический взгляд на операционные задачи крупных проектов и потребности в узкопрофильных кадрах.<br><br>Команда консультантов и руководство Esmera Global Solutions совокупно имеют более 30 лет международного опыта, приобретённого в сотрудничестве с ведущими операторами и EPC-подрядчиками в СНГ и за его пределами.<br><br>Этот опыт мы переводим в измеримую ценность для клиентов:",
@@ -499,8 +514,8 @@
       "plateLabels": { "quote": "Запрос коммерческого предложения", "cv": "Отправить резюме", "follow": "Актуальные вакансии", "linkedin": "LinkedIn", "telegram": "Telegram" },
       "links": { "linkedin": "https://www.linkedin.com/company/109095232", "telegram": "https://t.me/Esmera_Global_Solutions" }
     },
-    "kz": {
-      "nav": ["Басты бет","Стратегия","Қызметтер","Неге біз","Біз туралы","Байланыс"],
+    "kk": {
+      "nav": ["Басты бет","Стратегия","Қызметтер","Стандарттар","Неге біз","Біз туралы","Байланыс"],
       "heroSub": "САЛАЛЫҚ САРАПШЫЛАРДЫҢ ШЕБЕРЛІГІМЕН ЖАСАЛҒАН: ЭНЕРГЕТИКА ИНДУСТРИЯСЫНА АРНАЛҒАН ҒАЛАМДЫҚ РЕКРУТИНГ ЖӘНЕ КОНСАЛТИНГ.",
       "heroSub2": "Біз атқарушы іздеуден және жобалық іріктеуден бастап O&M қолдауына және сертификаттауға дайын оқытуға дейін — энергетика жобалары үшін маманданған кадрлар мен корпоративтік upskilling жеткіземіз.",
       "cta1": "Бағаны есептеу",
@@ -542,14 +557,16 @@
           "Халықаралық біліктілікті арттыру бағдарламаларын іріктеу және ұйымдастыру"
         ]}
       ],
+      "standardsTitle": "Халықаралық стандарттар және деректерді қорғау",
+      "standardsHTML": "<p><strong>Халықаралық стандарттар мен аккредитациялар</strong></p><p><em>Esmera Global Solutions</em> компаниясы өз басқару жүйелерін <strong>ISO 9001 (Сапа менеджменті)</strong>, <strong>ISO 14001 (Қоршаған ортаны басқару)</strong> және <strong>ISO 45001 (Еңбек қауіпсіздігі және денсаулық)</strong> қағидаттарына сәйкес ұйымдастырады.</p><p>Біз сондай-ақ <strong>Халықаралық еңбек ұйымының (ХЕҰ) негізгі конвенцияларын</strong> сақтаймыз және барлық қызметімізде <strong>HSE стандарттарын</strong> енгіземіз — бұл қауіпсіздік мәдениетін, экологиялық жауапкершілікті және қызметкерлердің әл-ауқатын нығайтуға бағытталған.</p><p>Сонымен қатар, біз <strong>ақпараттық қауіпсіздікке</strong> ерекше назар аударамыз, клиенттердің деректерін <strong>құпиялылық, тұтастық және қорғалу</strong> қағидаларына сай, халықаралық талаптарға сәйкес қорғаймыз.</p>",
       "whyTitle": "Неге Esmera Global Solutions?",
       "whyCards": [
         "Халықаралық тәжірибе + жеке тәсіл — Әр клиент пен кандидат үшін дара стратегиямен жаһандық ноу-хауды біріктіреміз.",
         "Интеграцияланған шешімдер — Іріктеуден және жалақы аутсорсингінен бастап оқыту мен сертификаттауға дейін — таланттардың толық өмірлік циклі.",
-        "Халықаралық стандарттар — ISO, ILO және HSE талаптарына сәйкестік — сапа, қауіпсіздік және комплаенс.",
+        "Стандарттар және деректерді қорғау — ISO 9001/14001/45001 қағидаларына сәйкестендіру; ХЕҰ конвенцияларына және HSE тәжірибесіне адалдық; мықты ақпараттық қауіпсіздік.",
         "Бағалау және дамыту — SHL, Hogan, Talent Q құралдары — дәл бағалау және үздіксіз оқуды қолдау.",
-        "ESG және тұрақтылық — Тұрақтылықтың үш тірегі: Адамдар — әділдік, инклюзия, өсу; Планета — жауапкершілік, ізді азайту; Пайда — ұзақ мерзімді құндылық.",
-        "Стратегиялық серіктестік — Біз тек штат бермейміз — жоғары өнімді командаларды құруда сенімді серіктес боламыз."
+        "ESG және тұрақтылық — Үш тірек: Адамдар (әділдік, инклюзия, өсу); Планета (жауапкершілік, ізді азайту); Пайда (ұзақ мерзімді құндылық).",
+        "Стратегиялық серіктестік — Біз жоғары өнімді командаларды құруда сенімді серіктес боламыз."
       ],
       "aboutTitle": "Біз туралы",
       "aboutText": "Esmera Global Solutions — энергетика саласындағы үздік халықаралық тәжірибе стандарттарын қолданатын консалтинг және рекрутинг компаниясы. Біз мұнай-газ, өнеркәсіптік құрылыс және жаңартылатын энергия секторларында кадрларды іріктеу, жобаға қолдау және консалтинг ұсынамыз.<br><br>Аксайда (Батыс Қазақстан) құрылған — өңірдің мұнай-газ құзыреттері шоғырланған, ірі халықаралық жобаларға жақын орналасқан ортада қалыптасқан. Бұл негіз бізге ірі жобалардың операциялық ерекшеліктерін және тар маманданған кадрларға сұранысты тәжірибеден түсінуге мүмкіндік берді.<br><br>Esmera Global Solutions кеңесшілері мен жетекшілері операторлармен және EPC мердігерлерімен бірлескен жұмыстың нәтижесінде алған 30+ жылдық жиынтық халықаралық тәжірибеге ие (ТМД және өзге нарықтар).<br><br>Бұл тәжірибе клиенттер үшін нақты құндылыққа айналады:",
@@ -632,7 +649,7 @@
   } catch (e) {
     window.__i18nParsedOK = false;
     console.error('i18n JSON parse error', e);
-    data = { en: { nav:["Home","Strategy","Services","Why Us","About","Contacts"], heroSub:"POWERED BY INDUSTRY EXPERTS: GLOBAL RECRUITMENT & CONSULTING FOR THE OIL & GAS INDUSTRY", heroSub2:"", cta1:"Get your quote today", cta2:"Explore services", strategyTitle:"Our Strategy", strategyLead:"Our strategy is built on four key pillars:", strategyItems:["Pillar 1","Pillar 2","Pillar 3","Pillar 4"], servicesTitle:"Core Services", servicesBlocks:[{"h":"Service","ps":["Item"]}], whyCards:["Reason"], aboutTitle:"About Us", aboutText:"", aboutBullets:[], contactTitle:"Contacts", plateLabels:{quote:"Get your quote today", cv:"Register your CV", follow:"For current opportunities", linkedin:"LinkedIn", telegram:"Telegram"}, links:{linkedin:"https://www.linkedin.com/company/109095232", telegram:"https://t.me/Esmera_Global_Solutions" } } };
+    data = { en: { nav:["Home","Strategy","Services","Standards","Why Us","About","Contacts"], heroSub:"POWERED BY INDUSTRY EXPERTS: GLOBAL RECRUITMENT & CONSULTING FOR THE OIL & GAS INDUSTRY", heroSub2:"", cta1:"Get your quote today", cta2:"Explore services", strategyTitle:"Our Strategy", strategyLead:"Our strategy is built on four key pillars:", strategyItems:["Pillar 1","Pillar 2","Pillar 3","Pillar 4"], servicesTitle:"Core Services", servicesBlocks:[{"h":"Service","ps":["Item"]}], standardsTitle:"International Standards & Data Protection", standardsHTML:"<p>Content</p>", whyCards:["Reason"], aboutTitle:"About Us", aboutText:"", aboutBullets:[], contactTitle:"Contacts", plateLabels:{quote:"Get your quote today", cv:"Register your CV", follow:"For current opportunities", linkedin:"LinkedIn", telegram:"Telegram"}, links:{linkedin:"https://www.linkedin.com/company/109095232", telegram:"https://t.me/Esmera_Global_Solutions" } } };
   }
 
   /* Helpers */
@@ -733,6 +750,10 @@
         sBlocks.appendChild(card);
       });
     }
+
+    // standards
+    setText('[data-i18n="standards-title"]', L.standardsTitle || 'International Standards & Data Protection');
+    setHTML('#standards-plate', L.standardsHTML || '');
 
     // why
     setText('[data-i18n="why-title"]', L.whyTitle || 'Why Choose Esmera Global Solutions?');
@@ -850,12 +871,13 @@
   (function runSmokeTests(){
     try {
       console.assert(window.__i18nParsedOK === true, 'i18n should parse');
-      ['en','ru','kz'].forEach(lang => {
+      ['en','ru','kk'].forEach(lang => {
         const D = (typeof data === 'object') ? data[lang] : null;
         console.assert(!!D, `Missing dict for ${lang}`);
-        console.assert(Array.isArray(D.nav) && D.nav.length === 6, `nav[${lang}] should have 6 items`);
+        console.assert(Array.isArray(D.nav) && D.nav.length === 7, `nav[${lang}] should have 7 items`);
         console.assert(typeof D.aboutText === 'string' && D.aboutText.length > 50, `aboutText[${lang}] should be long text`);
         console.assert(Array.isArray(D.aboutBullets) && D.aboutBullets.length === 4, `aboutBullets[${lang}] should have 4 items`);
+        console.assert(!!D.standardsHTML, `standardsHTML[${lang}] should exist`);
       });
       console.log('Smoke tests passed');
     } catch (e) {
@@ -865,3 +887,4 @@
   </script>
 </body>
 </html>
+
